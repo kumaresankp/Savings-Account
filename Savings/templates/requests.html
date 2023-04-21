@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+	 <h1>Transaction Form</h1>
+    <form method="POST" action="">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.account_number.label }} {{ form.account_number(size=20, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.transaction_type.label }} {{ form.transaction_type(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.amount.label }} {{ form.amount(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+    </div>
+
+{% endblock %}
