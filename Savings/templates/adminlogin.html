@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container mx-auto">
-    <div class="content-section" class = "d-flex align-items-center justify-content-center">
+    <div class="content-section d-flex align-items-center justify-content-center">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -33,17 +33,11 @@
                         {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-
             </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
-
         </form>
     </div>
-
-</div>
 </div>
 {% endblock %}
-
-

@@ -8,20 +8,21 @@
 
 <body>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <div class="container">
-
+<div class="container">
 <div class="row">
-    <div class="col-md-4">
-      <img src="static/logo.png" height = 150; alt="Image" class="img-fluid">
+    <div class="col-md-10 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h5 class="h3">Kings College of Engineering</h5>
+            <p class="text-muted">Empowering Future Engineers</p>
+        </div>
     </div>
-    <div class="col-md-8 d-flex align-items-center">
-      <div class="text-center">
-        <h5 class="h3">Kings College of Engineering</h5>
-      
-        
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+
+
+
+
+
 
   
 
@@ -29,7 +30,7 @@
 
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+    <div class="container-fluid">
     <a class="navbar-brand" href="#">Savings Account</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -84,8 +85,9 @@
               {% endfor %}
             {% endif %}
           {% endwith %}
-          {% block content %}{% endblock %}
+          
         </div>
+        {% block content %}{% endblock %}
 
 </body>
 

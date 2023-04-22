@@ -1,53 +1,69 @@
-
 {% extends "base.html" %}
 
 {% block content %}
-<h3 style="margin-top: 40px;">Username: {{ current_user.username }}  </h3>
-<h3>Account Number: {{account.account_number}}</h3>
-<h3 style="margin-bottom: 40px;">Balance: {{account.balance}}</h3>
-
-
-<button type="submit" class="btn btn-success"><a style = "color: white; text-decoration: none;" href="/requests">Deposit</a></button>
-<button type="submit" class="btn btn-success"><a style = "color: white; text-decoration: none;" href="/requests">Withdrawn</a></button>
-
-
 <div class="container mt-5">
-        <div>
-        <h1>Requests Table</h1>
-        <form method="POST" action="">
-      {{ form.csrf_token }}
-      <label for="{{ form.from_date.id }}">From Date:</label>
-      {{ form.from_date }}
-      <br>
-      <label for="{{ form.to_date.id }}">To Date:</label>
-      {{ form.to_date }}
-      <br>
-      {{ form.submit() }}
-    </form>
-        
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Account Details</h3>
+                    <h5 class="card-text">Username: {{ current_user.username }}</h5>
+                    <h5 class="card-text">Account Number: {{ account.account_number }}</h5>
+                    <h5 class="card-text">Balance: {{ account.balance }}</h5>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-success"><a style="color: white; text-decoration: none;"
+                                href="/requests">Deposit</a></button>
+                        <button type="submit" class="btn btn-success"><a style="color: white; text-decoration: none;"
+                                href="/requests">Withdrawn</a></button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <table class="table table-bordered mt-4">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Account Number</th>
-                    <th>Request Type</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            {% for request in requests %}
-            <tbody>
-                <tr>
-                    <td>{{ request.transanct_date}}</td>
-                    <td>{{request.account_number}}</td>
-                    <td>{{request.request_type}}</td>
-                    <td>{{request.amount}}</td>
-                    <td>{{request.status}}</td>
-                </tr>
-             {% endfor %}
-            </tbody>
-        </table>
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <h1 class="text-center mb-4">Requests Table</h1>
+                <form method="POST" action="">
+                    {{ form.csrf_token }}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="{{ form.from_date.id }}">From Date:</label>
+                            {{ form.from_date }}
+                        </div>
+                        <div class="col-md-4">
+                            <label for="{{ form.to_date.id }}">To Date:</label>
+                            {{ form.to_date }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form.submit(class_="btn btn-primary mt-4") }}
+                        </div>
+                    </div>
+                </form>
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Account Number</th>
+                            <th>Request Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for request in requests %}
+                        <tr>
+                            <td>{{ request.transanct_date}}</td>
+                            <td>{{ request.account_number}}</td>
+                            <td>{{ request.request_type}}</td>
+                            <td>{{ request.amount}}</td>
+                            <td>{{ request.status}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+</div>
 {% endblock %}
