@@ -28,7 +28,7 @@ This project is a web application for managing user accounts and banking transac
 
 ### Admin Login
 
-![Admin Page]https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/adminlogin.JPG)
+![Admin Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/adminlogin.JPG)
 
 ### Admin DashBoard Page
 
