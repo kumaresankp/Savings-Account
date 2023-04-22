@@ -8,7 +8,7 @@ This project is a web application for managing user accounts and banking transac
 
 ### Home Page
 
-![Home Page](screenshots//homepage.jpg)
+![Home Page](/screenshots//homepage.jpg)
 
 ### Register Page
 
