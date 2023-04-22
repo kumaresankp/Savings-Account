@@ -8,31 +8,31 @@ This project is a web application for managing user accounts and banking transac
 
 ### Home Page
 
-![Home Page](/screenshots//homepage.jpg)
+![Home Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/homepage.JPG)
 
 ### Register Page
 
-![Register Page](screenshots/registerpage.jpg)
+![Register Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/registerpage.JPG)
 
 ### Login Page
 
-![Login Page](screenshots/loginpage.jpg)
+![Login Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/loginpage.JPG)
 
 ### User Dashboard Page
 
-![User Dashboard Page](screenshots/userdashboard.jpg)
+![User Dashboard Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/userDashboard.JPG)
 
 ### Transanct Page
 
-![Transanct Page](screenshots/transanctPage.jpg)
+![Transanct Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/transanctPage.JPG)
 
 ### Admin Login
 
-![Admin Page](screenshots/adminlogin.jpg)
+![Admin Page]https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/adminlogin.JPG)
 
 ### Admin DashBoard Page
 
-![Admin Dashboard Page](screenshots/admindashboard.jpg)
+![Admin Dashboard Page](https://github.com/kumaresankp/Savings-Account/blob/main/screenshots/adminlogin.JPG)
 
 ## Features
 
