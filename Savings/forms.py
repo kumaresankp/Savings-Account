@@ -51,10 +51,11 @@ class AdminForm(FlaskForm):
 
 class AccountForm(FlaskForm):
     account_number = StringField('Account Number', validators=[DataRequired(), Length(min=1, max=20)])
-    balance = FloatField('Balance', validators=[DataRequired(), NumberRange(min=0)])
+    balance = FloatField('Amount', validators=[DataRequired(), NumberRange(min=0)])
     status = SelectField('Status', choices=[('pending', 'Pending'), ('Approved', 'Approved')],
                          validators=[DataRequired()])
     submit = SubmitField('Update')
+
 
 class DateForm(FlaskForm):
     from_date = DateField('From Date', validators=[DataRequired()], format='%Y-%m-%d')

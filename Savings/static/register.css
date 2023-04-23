@@ -1,0 +1,98 @@
+/* Example advanced CSS styles for the form */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #000;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    color: #000;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-group .invalid-feedback {
+    display: block;
+    font-size: 0.8rem;
+    color: #dc3545;
+}
+
+.form-group .valid-feedback {
+    display: block;
+    font-size: 0.8rem;
+    color: #28a745;
+}
+
+.form-group .form-control-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #007bff;
+}
+
+.form-group .form-control-label.text-danger {
+    color: #dc3545;
+}
+
+.form-group .form-control-label.text-warning {
+    color: #ffc107;
+}
+
+.form-group .form-control-label.text-success {
+    color: #28a745;
+}
+
+.form-group .form-control-label.text-info {
+    color: #17a2b8;
+}
+
+.form-group .form-control::placeholder {
+    color: #6c757d;
+}
+
+.form-group .form-control:focus::placeholder {
+    color: #495057;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

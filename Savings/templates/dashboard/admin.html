@@ -12,14 +12,15 @@
                         {{ form.csrf_token }}
                         <div class="form-group">
                             {{ form.account_number.label(class='form-label') }}
-                            {{ form.account_number(class='form-control') }}
+                            {{ form.account_number(class='form-control',id='account-number-input') }}
                             {% for error in form.account_number.errors %}
                             <span class="text-danger">{{ error }}</span>
                             {% endfor %}
                         </div>
+                        <button type="button" class="btn btn-primary" id="check-button">Check</button>
                         <div class="form-group">
                             {{ form.balance.label(class='form-label') }}
-                            {{ form.balance(class='form-control') }}
+                            {{ form.balance(class='form-control',id='balance-id') }}
                             {% for error in form.balance.errors %}
                             <span class="text-danger">{{ error }}</span>
                             {% endfor %}
@@ -67,4 +68,29 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Get the elements
+    const accountNumberInput = document.getElementById('account-number-input');
+    const checkButton = document.getElementById('check-button');
+    const balanceInput = document.getElementById('balance-id'); // replace with the actual id of your "balance" input field
+
+    // Add event listener to "Check" button
+    checkButton.addEventListener('click', () => {
+        // Get the account number value
+        const accountNumber = accountNumberInput.value;
+
+        // Send a request to the server to fetch the balance based on the account number
+        fetch(`/get_balance?account_number=${accountNumber}`)
+            .then(response => response.text()) // remove .json() method
+            .then(data => {
+                // Update the "balance" input field with the fetched balance value
+                balanceInput.value = parseFloat(data); // access data directly, assuming it's a string or number
+            })
+            .catch(error => console.error(error));
+    });
+</script>
+
+
+
 {% endblock %}

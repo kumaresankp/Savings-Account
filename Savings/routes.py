@@ -227,3 +227,14 @@ def generatepdf():
 
     # Send the generated PDF as a response to the browser
     return send_file(file_path, as_attachment=True)
+
+@app.route('/get_balance', methods=['GET'])
+def get_balance():
+    # Get the account number from the query parameters
+    account_number = request.args.get('account_number')
+    account = Request.query.filter((Request.account_number==account_number) & (Request.status=="Pending")).first()
+    balance = account.amount
+    return str(balance)
+
+if __name__ == '__main__':
+    app.run(debug=True)
