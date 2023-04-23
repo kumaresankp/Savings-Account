@@ -60,4 +60,4 @@ class AccountForm(FlaskForm):
 class DateForm(FlaskForm):
     from_date = DateField('From Date', validators=[DataRequired()], format='%Y-%m-%d')
     to_date = DateField('To Date', validators=[DataRequired()], format='%Y-%m-%d')
-    submit = SubmitField('Download pdf')
+    submit = SubmitField('Download')
